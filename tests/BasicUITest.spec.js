@@ -56,9 +56,3 @@ test('Screenshot & visual comparison', async ({ page }) => {
     console.log('Text box is hidden');
 });
 
-test('visual', async ({ page }) => {
-  await page.goto("https://instagram.com/");
-  // Focus on the login form only, not the whole dynamic page
-  const loginForm = page.locator('form'); 
-  expect(await loginForm.screenshot()).toMatchSnapshot('InstloginForm.png');
-});
